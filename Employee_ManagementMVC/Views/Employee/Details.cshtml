@@ -1,0 +1,37 @@
+﻿@model Employee_ManagementMVC.Models.Employee
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h2 class="text-center text-primary">Employee Details</h2>
+        <hr class="mb-4">
+
+        <div class="row">
+            <div class="col-12">
+                <dl class="row">
+                    <dt class="col-sm-4 text-end fw-bold">First Name:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Firstname)</dd>
+
+                    <dt class="col-sm-4 text-end fw-bold">Last Name:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Lastname)</dd>
+
+                    <dt class="col-sm-4 text-end fw-bold">Gender:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Gender)</dd>
+
+                    <dt class="col-sm-4 text-end fw-bold">Date of Birth:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DOB)</dd>
+
+                    <dt class="col-sm-4 text-end fw-bold">Age:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Age)</dd>
+
+                    <dt class="col-sm-4 text-end fw-bold">Address:</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.Address)</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary px-4 me-2" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary px-4" })
+        </div>
+    </div>
+</div>

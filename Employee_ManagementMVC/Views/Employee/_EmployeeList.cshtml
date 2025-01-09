@@ -1,0 +1,66 @@
+﻿<!--@model IEnumerable<Employee_ManagementMVC.Models.Employee>
+
+<div class="container mt-4">
+    <h3 class="mb-3">Employee List</h3>
+
+    <!-- Search Form -->
+    <!--<div class="d-flex mb-3">
+        <input type="text" class="form-control mr-2" placeholder="Search by Name or Age..." id="searchInput">
+        <button type="button" class="btn btn-primary" onclick="filterTable()">Search</button>
+    </div>-->
+
+    <!-- Employee Table -->
+    <!--<table class="table table-striped table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Firstname</td>
+                    <td>@item.Lastname</td>
+                    <td>@item.Gender</td>
+                    <td>@item.Age</td>
+                    <td>@item.DOB.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Address</td>
+                    <td class="text-center">
+                        <a href="@Url.Action("Edit", "Employee", new { id = item.Id })" class="btn btn-warning btn-sm" title="Edit">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                        <a href="@Url.Action("Details", "Employee", new { id = item.Id })" class="btn btn-info btn-sm" title="Details">
+                            <i class="bi bi-eye"></i> Details
+                        </a>
+                        <a href="@Url.Action("Delete", "Employee", new { id = item.Id })" class="btn btn-danger btn-sm" title="Delete" onclick="return confirm('Are you sure you want to delete this employee?');">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>-->
+
+@*<script>
+    // JavaScript function to filter the table based on the search input
+    function filterTable() {
+        var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        $.ajax({
+            url: '@Url.Action("Index", "Employee")', // Use the controller's Index action
+            data: { query: searchTerm },
+            type: 'GET',
+            success: function (data) {
+                $('#employeeList').html(data); // Update the employee list with the search results
+            }
+        });
+    }
+</script>*@
+
